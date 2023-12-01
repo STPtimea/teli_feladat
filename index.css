@@ -1,0 +1,92 @@
+@import url(variables.css);
+* {
+  padding: 0;
+  margin: 0;
+}
+html {
+  background-image: url(img/hatter.jpg);
+  background-size: cover;
+}
+body {
+  max-width: 900px;
+  height: fit-content;
+  background-color: var(--title);
+  margin-inline: auto;
+  display: block;
+}
+header {
+  background-image: url(img/fejlec.jpg);
+  height: 8rem;
+}
+header h1 {
+  text-align: center;
+  position: relative;
+  top: 5rem;
+  color: var(--title);
+  text-shadow: 1px 1px var(--shadow);
+}
+.buttons a {
+  padding-top: 2rem;
+  background-color: var(--gomb);
+  display: block;
+  margin-inline: auto;
+  margin: 0.2rem; /* Gombok közti térköz*/
+  justify-content: center;
+  width: 8rem;
+  padding: 10px 15px;
+  text-align: center;
+  border-radius: 15px;
+  font-size: 16px;
+  text-decoration: none;
+  color: var(--title);
+  transition: ease-in-out 0.25s;
+  display: flex;
+}
+.middle {
+  display: grid;
+  grid-template-areas: "a b c";
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+.buttons {
+  grid-area: a;
+}
+.img-box {
+  padding-top: 2rem;
+  grid-area: b;
+  display: grid;
+  width: 100%;
+  border-collapse: collapse;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.img-box .polaroid {
+  width: 100%;
+  padding: 10px 10px 20px 10px;
+  border: 1px solid #bfbfbf;
+  background-color: white;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+.img-box .rotate_right {
+  transform: rotate(7deg);
+}
+.img-box .rotate_left {
+  transform: rotate(-8deg);
+}
+.vers {
+  grid-area: c;
+  padding: 2rem;
+  margin-left: 2rem;
+  border-top: 1px solid rgb(182, 182, 182);
+  border-left: 1px solid rgb(182, 182, 182);
+  padding-left: 1rem;
+  font-size: 0.9rem;
+}
+
+footer {
+  text-align: center;
+  padding-top: 1rem;
+  background-color: rgb(0, 153, 255);
+  height: 2rem;
+}
